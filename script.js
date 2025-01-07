@@ -36,13 +36,21 @@ const intervalId = setInterval(() => {
                 </div>
                 <span class="text-danger">&</span>
                 <div>
-                    ${days} dias
+                    ${days} dias juntos
                 </div>
             </div>
-            <div class="row my-2 justify-content-center">
-                    ${hours.toString().padStart(2, "0")} : 
-                    ${minutes.toString().padStart(2, "0")} : 
-                    ${seconds.toString().padStart(2, "0")}
+            <div class="d-flex gap-2 my-2 justify-content-center align-items-center">
+                <span class="counter">${hours
+                  .toString()
+                  .padStart(2, "0")}</span>
+                    : 
+                    <span class="counter">${minutes
+                      .toString()
+                      .padStart(2, "0")}</span>
+                    : 
+                    <span class="counter">${seconds
+                      .toString()
+                      .padStart(2, "0")}</span>
             </div>
         `;
-}, 1000);
+}, 500);
