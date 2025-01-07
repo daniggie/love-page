@@ -1,0 +1,7 @@
+#imgReceptor {
+  background-image: url("sources/roses.png");
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px rgb(67, 67, 67), 2px 2px 1px black, 3px 3px 1px white,
+    4px 4px 1px white, 5px 5px 1px rgba(66, 66, 66, 0.774), 6px 6px 1px black;
+}
