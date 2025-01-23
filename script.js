@@ -30,27 +30,39 @@ const intervalId = setInterval(() => {
 
   // Atualiza o conteúdo do elemento com o ID "countdown"
   document.getElementById("countdown").innerHTML = `
-            <div class="d-flex gap-2 my-2 justify-content-center">
-                <div>
-                    Há ${months} meses 
-                </div>
-                <span class="text-danger">&</span>
-                <div>
-                    ${days} dias juntos
-                </div>
+          <div class="d-flex flex-wrap gap-2 my-2 justify-content-center align-items-center">
+            <div class="d-flex gap-2">  
+              <div class="counter d-flex flex-column">
+                <span>${months.toString().padStart(2, "0")}</span> 
+                <small class="fs-6">meses</small>
+              </div>
+              <div class="counter d-flex flex-column">
+                <span>${days.toString().padStart(2, "0")}</span> 
+                <small class="fs-6">dias</small>
+              </div>
             </div>
-            <div class="d-flex gap-2 my-2 justify-content-center align-items-center">
-                <span class="counter">${hours
-                  .toString()
-                  .padStart(2, "0")}</span>
-                    : 
-                    <span class="counter">${minutes
-                      .toString()
-                      .padStart(2, "0")}</span>
-                    : 
-                    <span class="counter">${seconds
-                      .toString()
-                      .padStart(2, "0")}</span>
+            <div class="d-flex gap-2 align-items-center">
+              <span class="counter">${hours.toString().padStart(2, "0")} </span>
+              : 
+              <span class="counter">${minutes
+                .toString()
+                .padStart(2, "0")}</span>
+              : 
+              <span class="counter">${seconds
+                .toString()
+                .padStart(2, "0")}</span>
             </div>
+          </div>
         `;
 }, 500);
+
+const blocked = setInterval(() => {
+  if (document.getElementById("imgReceptor").style.display === "none") {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const senha = urlParams.get("senha");
+    if (senha === "DM") {
+      document.getElementById("imgReceptor").style.display = "block";
+    }
+  }
+}, 1000);

@@ -27,26 +27,28 @@
 
     <script src="script.js"></script>
   </head>
-  <body class="bg-dark pt-4">
+  <body class="bg-dark pt-4" id="imgReceptor" style="display: none">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-md-6" id="imgReceptor">
+        <div class="col-md-6">
           <div class="card">
             <div class="card-body text-center">
               <img src="sources/icon.png" alt="Icone" class="col-1" />
               <h2>
                 <span class="text-danger">♥</span>
                 <span class="text-success">~. </span>
-                .. .
+                Te amo para sempre
                 <span class="text-success">~. </span>
                 <span class="text-danger">♥</span>
               </h2>
+              <p class="fs-6">Desde 27 de outubro de 2024</p>
 
-              <h3
+              <h4
                 class="my-4 rounded"
                 style="
                   min-height: 110px;
                   display: flex;
+                  flex-wrap: wrap;
                   flex-direction: column;
                   justify-content: center;
                   align-items: center;
@@ -54,9 +56,21 @@
                   color: white;
                 "
                 id="countdown"
-              ></h3>
+              ></h4>
+              <p class="fs-6 fst-italic fw-lighter">D&M</p>
 
-              <div class="ratio ratio-16x9 bg-dark border rounded"></div>
+              <div
+                class="ratio ratio-16x9 border rounded"
+                style="
+                  background-color: #913d87;
+                  box-shadow: 0px 0px 5px #913d87;
+                "
+              >
+                <video controls>
+                  <source src="sources/song.mp4" type="video/mp4" />
+                  Puxa! Não carregou o vídeo :c
+                </video>
+              </div>
             </div>
           </div>
         </div>
