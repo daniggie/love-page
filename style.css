@@ -1,20 +1,20 @@
 #imgReceptor {
-  background-image: url("sources/roses.png");
-  background-repeat: repeat;
+  background-image: url("sources/city.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 12px;
 }
 
 #countdown {
-  background-image: url("sources/roses.png");
+  background: linear-gradient(215deg, #a5147c, #1d2048);
   text-shadow: 0px 0px 5px #000000;
-  background-size: cover;
-  background-position: center;
 }
 
 .counter {
   font-family: monospace;
   padding: 10px;
   border-radius: 10px;
-  background-color: #212529;
-  box-shadow: 0px 0px 5px #0508c6;
+  background-color: #050505;
+  box-shadow: 0px 0px 80px #000000;
+  filter: brightness(2);
 }
