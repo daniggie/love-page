@@ -8,6 +8,7 @@
 #countdown {
   background: linear-gradient(215deg, #a5147c, #1d2048);
   text-shadow: 0px 0px 5px #000000;
+  filter: sepia(1);
 }
 
 .counter {

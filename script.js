@@ -61,7 +61,7 @@ const blocked = setInterval(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const senha = urlParams.get("senha");
-    if (senha === "DM") {
+    if (senha === "D&M") {
       document.getElementById("imgReceptor").style.display = "block";
     }
   }
