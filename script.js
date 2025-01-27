@@ -66,3 +66,46 @@ const blocked = setInterval(() => {
     }
   }
 }, 1000);
+
+const setTab = (fileName) => {
+  loadHtml(fileName + ".html");
+  const tabs = document.querySelectorAll(".nav-link");
+
+  tabs.forEach((tab) => {
+    tab.classList.remove("active", "bg-light", "text-dark");
+    tab.classList.add("bg-dark", "text-light");
+  });
+
+  const clickedTab = Array.from(tabs).find((tab) =>
+    tab.getAttribute("onclick")?.includes(fileName),
+  );
+  if (clickedTab) {
+    clickedTab.classList.remove("bg-dark", "text-light");
+    clickedTab.classList.add("active", "bg-light", "text-dark");
+  } else {
+    console.error("Aba correspondente não encontrada.");
+  }
+};
+
+const loadHtml = (fileName) => {
+  const targetElement = document.querySelector(".card-body");
+
+  fetch("tab/" + fileName)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Erro ao carregar o arquivo: " + response.status);
+      }
+      return response.text();
+    })
+    .then((html) => {
+      targetElement.innerHTML = html;
+    })
+    .catch((error) => {
+      console.error("Erro:", error);
+      targetElement.innerHTML = "<p class='text-danger fs-6'>♥ Em breve ♥</p>";
+    });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  setTab("home-tab");
+});
